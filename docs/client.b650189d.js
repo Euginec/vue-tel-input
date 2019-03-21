@@ -2,18 +2,14 @@ webpackJsonp([1],[
 /* 0 */,
 /* 1 */,
 /* 2 */
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib?{"babelrc":false,"presets":[["/Users/stevend/coding/vue/vue-tel-input/node_modules/babel-preset-poi/index.js",{"jsx":"vue"}]],"cacheDirectory":true}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./demo/App.vue ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib?{"babelrc":false,"presets":[["/var/www/html/vue-tel-input/node_modules/babel-preset-poi/index.js",{"jsx":"vue"}]],"cacheDirectory":true}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./demo/App.vue ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
 //
 //
 //
@@ -73,7 +69,7 @@ webpackJsonp([1],[
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/stevend/coding/vue/vue-tel-input/demo/index.js */4);
+module.exports = __webpack_require__(/*! /var/www/html/vue-tel-input/demo/index.js */4);
 
 
 /***/ }),
@@ -297,7 +293,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           a = void 0,
           o = void 0;if ("string" != typeof t) throw new TypeError("A phone number for parsing must be a string.");return i = t, "string" == typeof e ? r ? (a = w({ defaultCountry: e }, n), o = r) : (a = { defaultCountry: e }, o = n) : n ? (a = e, o = n) : o = e, a = a ? w({}, I, a) : I, { text: i, options: a, metadata: new _.a(o) };
     }function l(t) {
-      var e = t.search(S);if (e < 0) return {};var n = t.slice(0, e);if (!i(n)) return {};for (var r = t.match(S), a = 1; a < r.length;) {
+      var e = t.search(C);if (e < 0) return {};var n = t.slice(0, e);if (!i(n)) return {};for (var r = t.match(C), a = 1; a < r.length;) {
         if (null != r[a] && r[a].length > 0) return { number: n, ext: r[a] };a++;
       }
     }function f(t, e, n) {
@@ -341,10 +337,10 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         E = 2,
         x = 250,
         k = Object(g.g)("parsing"),
-        S = new RegExp("(?:" + k + ")$", "i"),
-        C = "[" + g.d + "]{" + E + "}",
+        C = new RegExp("(?:" + k + ")$", "i"),
+        S = "[" + g.d + "]{" + E + "}",
         A = "[" + g.c + "]{0,1}(?:[" + g.e + "]*[" + g.d + "]){3,}[" + g.e + g.d + "]*",
-        R = new RegExp("^" + C + "$|^" + A + "(?:" + k + ")?$", "i"),
+        R = new RegExp("^" + S + "$|^" + A + "(?:" + k + ")?$", "i"),
         T = new RegExp("[" + g.c + g.d + "]"),
         O = new RegExp("[^" + g.d + "]+$"),
         I = { country: {} };
@@ -525,7 +521,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               return A(this, e, n);case "ascii":
               return T(this, e, n);case "latin1":case "binary":
               return O(this, e, n);case "base64":
-              return C(this, e, n);case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":
+              return S(this, e, n);case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":
               return N(this, e, n);default:
               if (r) throw new TypeError("Unknown encoding: " + t);t = (t + "").toLowerCase(), r = !0;}
         }
@@ -569,9 +565,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         return E(t, e, n, r);
       }function k(t, e, n, r) {
         return W(Y(e), t, n, r);
-      }function S(t, e, n, r) {
+      }function C(t, e, n, r) {
         return W(q(e, t.length - n), t, n, r);
-      }function C(t, e, n) {
+      }function S(t, e, n) {
         return 0 === e && n === t.length ? V.fromByteArray(t) : V.fromByteArray(t.slice(e, n));
       }function A(t, e, n) {
         n = Math.min(t.length, n);for (var r = [], i = e; i < n;) {
@@ -749,7 +745,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               return E(this, t, e, n);case "latin1":case "binary":
               return x(this, t, e, n);case "base64":
               return k(this, t, e, n);case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":
-              return S(this, t, e, n);default:
+              return C(this, t, e, n);default:
               if (a) throw new TypeError("Unknown encoding: " + r);r = ("" + r).toLowerCase(), a = !0;}
         }
       }, a.prototype.toJSON = function () {
@@ -1599,7 +1595,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
     (function (e, r, i) {
       function a(t) {
         var e = this;this.next = null, this.entry = null, this.finish = function () {
-          C(e, t);
+          S(e, t);
         };
       }function o(t) {
         return L.from(t);
@@ -1665,9 +1661,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         e.prefinished || e.finalCalled || ("function" == typeof t._final ? (e.pendingcb++, e.finalCalled = !0, A(E, t, e)) : (e.prefinished = !0, t.emit("prefinish")));
       }function k(t, e) {
         var n = w(e);return n && (x(t, e), 0 === e.pendingcb && (e.finished = !0, t.emit("finish"))), n;
-      }function S(t, e, n) {
-        e.ending = !0, k(t, e), n && (e.finished ? A(n) : t.once("finish", n)), e.ended = !0, t.writable = !1;
       }function C(t, e, n) {
+        e.ending = !0, k(t, e), n && (e.finished ? A(n) : t.once("finish", n)), e.ended = !0, t.writable = !1;
+      }function S(t, e, n) {
         var r = t.entry;for (t.entry = null; r;) {
           var i = r.callback;e.pendingcb--, i(n), r = r.next;
         }e.corkedRequestsFree ? e.corkedRequestsFree.next = t : e.corkedRequestsFree = t;
@@ -1705,7 +1701,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       }, l.prototype._write = function (t, e, n) {
         n(new Error("_write() is not implemented"));
       }, l.prototype._writev = null, l.prototype.end = function (t, e, n) {
-        var r = this._writableState;"function" == typeof t ? (n = t, t = null, e = null) : "function" == typeof e && (n = e, e = null), null !== t && void 0 !== t && this.write(t, e), r.corked && (r.corked = 1, this.uncork()), r.ending || r.finished || S(this, r, n);
+        var r = this._writableState;"function" == typeof t ? (n = t, t = null, e = null) : "function" == typeof e && (n = e, e = null), null !== t && void 0 !== t && this.write(t, e), r.corked && (r.corked = 1, this.uncork()), r.ending || r.finished || C(this, r, n);
       }, Object.defineProperty(l.prototype, "destroyed", { get: function get() {
           return void 0 !== this._writableState && this._writableState.destroyed;
         }, set: function set(t) {
@@ -1751,24 +1747,24 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       }if (n || c || d.match(/^\/\/[^@\/]+@[^@\/]+/)) {
         var x = "//" === d.substr(0, 2);!x || c && b[c] || (d = d.substr(2), this.slashes = !0);
       }if (!b[c] && (x || c && !w[c])) {
-        for (var k = -1, S = 0; S < m.length; S++) {
-          var C = d.indexOf(m[S]);-1 !== C && (-1 === k || C < k) && (k = C);
-        }var A, R;R = -1 === k ? d.lastIndexOf("@") : d.lastIndexOf("@", k), -1 !== R && (A = d.slice(0, R), d = d.slice(R + 1), this.auth = decodeURIComponent(A)), k = -1;for (var S = 0; S < g.length; S++) {
-          var C = d.indexOf(g[S]);-1 !== C && (-1 === k || C < k) && (k = C);
-        }-1 === k && (k = d.length), this.host = d.slice(0, k), d = d.slice(k), this.parseHost(), this.hostname = this.hostname || "";var T = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];if (!T) for (var O = this.hostname.split(/\./), S = 0, I = O.length; S < I; S++) {
-          var N = O[S];if (N && !N.match(_)) {
+        for (var k = -1, C = 0; C < m.length; C++) {
+          var S = d.indexOf(m[C]);-1 !== S && (-1 === k || S < k) && (k = S);
+        }var A, R;R = -1 === k ? d.lastIndexOf("@") : d.lastIndexOf("@", k), -1 !== R && (A = d.slice(0, R), d = d.slice(R + 1), this.auth = decodeURIComponent(A)), k = -1;for (var C = 0; C < g.length; C++) {
+          var S = d.indexOf(g[C]);-1 !== S && (-1 === k || S < k) && (k = S);
+        }-1 === k && (k = d.length), this.host = d.slice(0, k), d = d.slice(k), this.parseHost(), this.hostname = this.hostname || "";var T = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];if (!T) for (var O = this.hostname.split(/\./), C = 0, I = O.length; C < I; C++) {
+          var N = O[C];if (N && !N.match(_)) {
             for (var L = "", M = 0, P = N.length; M < P; M++) {
               N.charCodeAt(M) > 127 ? L += "x" : L += N[M];
             }if (!L.match(_)) {
-              var B = O.slice(0, S),
-                  j = O.slice(S + 1),
+              var B = O.slice(0, C),
+                  j = O.slice(C + 1),
                   F = N.match(y);F && (B.push(F[1]), j.unshift(F[2])), j.length && (d = "/" + j.join(".") + d), this.hostname = B.join(".");break;
             }
           }
         }this.hostname.length > 255 ? this.hostname = "" : this.hostname = this.hostname.toLowerCase(), T || (this.hostname = s.toASCII(this.hostname));var D = this.port ? ":" + this.port : "",
             U = this.hostname || "";this.host = U + D, this.href += this.host, T && (this.hostname = this.hostname.substr(1, this.hostname.length - 2), "/" !== d[0] && (d = "/" + d));
-      }if (!v[$]) for (var S = 0, I = p.length; S < I; S++) {
-        var z = p[S];if (-1 !== d.indexOf(z)) {
+      }if (!v[$]) for (var C = 0, I = p.length; C < I; C++) {
+        var z = p[C];if (-1 !== d.indexOf(z)) {
           var Z = encodeURIComponent(z);Z === z && (Z = escape(z)), d = d.split(z).join(Z);
         }
       }var G = d.indexOf("#");-1 !== G && (this.hash = d.substr(G), d = d.slice(0, G));var H = d.indexOf("?");if (-1 !== H ? (this.search = d.substr(H), this.query = d.substr(H + 1), e && (this.query = E.parse(this.query)), d = d.slice(0, H)) : e && (this.search = "", this.query = {}), d && (this.pathname = d), w[$] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
@@ -1815,11 +1811,11 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         if (x) {
           n.hostname = n.host = E.shift();var k = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@");k && (n.auth = k.shift(), n.host = n.hostname = k.shift());
         }return n.search = t.search, n.query = t.query, u.isNull(n.pathname) && u.isNull(n.search) || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.href = n.format(), n;
-      }if (!E.length) return n.pathname = null, n.search ? n.path = "/" + n.search : n.path = null, n.href = n.format(), n;for (var S = E.slice(-1)[0], C = (n.host || t.host || E.length > 1) && ("." === S || ".." === S) || "" === S, A = 0, R = E.length; R >= 0; R--) {
-        S = E[R], "." === S ? E.splice(R, 1) : ".." === S ? (E.splice(R, 1), A++) : A && (E.splice(R, 1), A--);
+      }if (!E.length) return n.pathname = null, n.search ? n.path = "/" + n.search : n.path = null, n.href = n.format(), n;for (var C = E.slice(-1)[0], S = (n.host || t.host || E.length > 1) && ("." === C || ".." === C) || "" === C, A = 0, R = E.length; R >= 0; R--) {
+        C = E[R], "." === C ? E.splice(R, 1) : ".." === C ? (E.splice(R, 1), A++) : A && (E.splice(R, 1), A--);
       }if (!y && !v) for (; A--; A) {
         E.unshift("..");
-      }!y || "" === E[0] || E[0] && "/" === E[0].charAt(0) || E.unshift(""), C && "/" !== E.join("/").substr(-1) && E.push("");var T = "" === E[0] || E[0] && "/" === E[0].charAt(0);if (x) {
+      }!y || "" === E[0] || E[0] && "/" === E[0].charAt(0) || E.unshift(""), S && "/" !== E.join("/").substr(-1) && E.push("");var T = "" === E[0] || E[0] && "/" === E[0].charAt(0);if (x) {
         n.hostname = n.host = T ? "" : E.length ? E.shift() : "";var k = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@");k && (n.auth = k.shift(), n.host = n.hostname = k.shift());
       }return y = y || n.host && E.length, y && !T && E.unshift(""), E.length ? n.pathname = E.join("/") : (n.pathname = null, n.path = null), u.isNull(n.pathname) && u.isNull(n.search) || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.auth = t.auth || n.auth, n.slashes = n.slashes || t.slashes, n.href = n.format(), n;
     }, r.prototype.parseHost = function () {
@@ -1839,16 +1835,16 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           e[t] = !0;
         }), e;
       }function s(t, n, r) {
-        if (t.customInspect && n && S(n.inspect) && n.inspect !== e.inspect && (!n.constructor || n.constructor.prototype !== n)) {
+        if (t.customInspect && n && C(n.inspect) && n.inspect !== e.inspect && (!n.constructor || n.constructor.prototype !== n)) {
           var i = n.inspect(r, t);return y(i) || (i = s(t, i, r)), i;
         }var a = u(t, n);if (a) return a;var o = Object.keys(n),
             p = d(o);if (t.showHidden && (o = Object.getOwnPropertyNames(n)), k(n) && (o.indexOf("message") >= 0 || o.indexOf("description") >= 0)) return l(n);if (0 === o.length) {
-          if (S(n)) {
+          if (C(n)) {
             var g = n.name ? ": " + n.name : "";return t.stylize("[Function" + g + "]", "special");
           }if (w(n)) return t.stylize(RegExp.prototype.toString.call(n), "regexp");if (x(n)) return t.stylize(Date.prototype.toString.call(n), "date");if (k(n)) return l(n);
         }var m = "",
             _ = !1,
-            v = ["{", "}"];if ($(n) && (_ = !0, v = ["[", "]"]), S(n)) {
+            v = ["{", "}"];if ($(n) && (_ = !0, v = ["[", "]"]), C(n)) {
           m = " [Function" + (n.name ? ": " + n.name : "") + "]";
         }if (w(n) && (m = " " + RegExp.prototype.toString.call(n)), x(n) && (m = " " + Date.prototype.toUTCString.call(n)), k(n) && (m = " " + l(n)), 0 === o.length && (!_ || 0 == n.length)) return v[0] + m + v[1];if (r < 0) return w(n) ? t.stylize(RegExp.prototype.toString.call(n), "regexp") : t.stylize("[Object]", "special");t.seen.push(n);var b;return b = _ ? f(t, n, r, p, o) : o.map(function (e) {
           return h(t, n, r, p, e, _);
@@ -1901,9 +1897,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         return E(t) && "[object Date]" === A(t);
       }function k(t) {
         return E(t) && ("[object Error]" === A(t) || t instanceof Error);
-      }function S(t) {
-        return "function" == typeof t;
       }function C(t) {
+        return "function" == typeof t;
+      }function S(t) {
         return null === t || "boolean" == typeof t || "number" == typeof t || "string" == typeof t || "symbol" == (typeof t === "undefined" ? "undefined" : _typeof(t)) || void 0 === t;
       }function A(t) {
         return Object.prototype.toString.call(t);
@@ -1947,7 +1943,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             var r = e.format.apply(e, arguments);console.error("%s %d: %s", t, n, r);
           };
         } else L[t] = function () {};return L[t];
-      }, e.inspect = i, i.colors = { bold: [1, 22], italic: [3, 23], underline: [4, 24], inverse: [7, 27], white: [37, 39], grey: [90, 39], black: [30, 39], blue: [34, 39], cyan: [36, 39], green: [32, 39], magenta: [35, 39], red: [31, 39], yellow: [33, 39] }, i.styles = { special: "cyan", number: "yellow", boolean: "yellow", undefined: "grey", null: "bold", string: "green", date: "magenta", regexp: "red" }, e.isArray = $, e.isBoolean = p, e.isNull = g, e.isNullOrUndefined = m, e.isNumber = _, e.isString = y, e.isSymbol = v, e.isUndefined = b, e.isRegExp = w, e.isObject = E, e.isDate = x, e.isError = k, e.isFunction = S, e.isPrimitive = C, e.isBuffer = n(91);var M = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];e.log = function () {
+      }, e.inspect = i, i.colors = { bold: [1, 22], italic: [3, 23], underline: [4, 24], inverse: [7, 27], white: [37, 39], grey: [90, 39], black: [30, 39], blue: [34, 39], cyan: [36, 39], green: [32, 39], magenta: [35, 39], red: [31, 39], yellow: [33, 39] }, i.styles = { special: "cyan", number: "yellow", boolean: "yellow", undefined: "grey", null: "bold", string: "green", date: "magenta", regexp: "red" }, e.isArray = $, e.isBoolean = p, e.isNull = g, e.isNullOrUndefined = m, e.isNumber = _, e.isString = y, e.isSymbol = v, e.isUndefined = b, e.isRegExp = w, e.isObject = E, e.isDate = x, e.isError = k, e.isFunction = C, e.isPrimitive = S, e.isBuffer = n(91);var M = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];e.log = function () {
         console.log("%s - %s", T(), e.format.apply(e, arguments));
       }, e.inherits = n(6), e._extend = function (t, e) {
         if (!e || !E(e)) return t;for (var n = Object.keys(e), r = n.length; r--;) {
@@ -1965,7 +1961,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       }return Array.from(t);
     }var i = n(51),
         a = n(59),
-        o = n(60);e.a = { name: "vue-tel-input", props: { value: { type: String }, placeholder: { type: String, default: "Enter a phone number" }, disabledFetchingCountry: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, disabledFormatting: { type: Boolean, default: !1 }, invalidMsg: { default: "", type: String }, required: { type: Boolean, default: !1 }, defaultCountry: { type: String, default: "" }, enabledFlags: { type: Boolean, default: !0 }, preferredCountries: { type: Array, default: function _default() {
+        o = n(60);e.a = { name: "vue-tel-input", props: { value: { type: String }, placeholder: { type: String, default: "Enter a phone number" }, disabledFetchingCountry: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, disabledFormatting: { type: Boolean, default: !1 }, invalidMsg: { default: "", type: String }, required: { type: Boolean, default: !1 }, defaultCountry: { type: String, default: "" }, enabledCountryCode: { type: Boolean, default: !1 }, enabledFlags: { type: Boolean, default: !0 }, preferredCountries: { type: Array, default: function _default() {
             return [];
           } }, onlyCountries: { type: Array, default: function _default() {
             return [];
@@ -1973,8 +1969,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             return [];
           } }, autocomplete: { type: String, default: "on" }, name: { type: String, default: "telephone" }, inputClasses: { type: String, default: "" }, dropdownOptions: { type: Object, default: function _default() {
             return {};
-          } } }, mounted: function mounted() {
-        this.initializeCountry(), this.$emit("onValidate", this.response);
+          } }, selectedCountryCode: { type: Boolean, default: !1 }, replaceDialCode: { type: Boolean, default: !1 } }, mounted: function mounted() {
+        this.initializeCountry(), this.selectedCountryCode && this.activeCountry && (this.phone = "+" + this.activeCountry.dialCode), this.$emit("onValidate", this.response);
       }, created: function created() {
         this.value && (this.phone = this.value);
       }, data: function data() {
@@ -2019,8 +2015,12 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           return { highlighted: this.selectedIndex === t, "last-preferred": t === this.preferredCountries.length - 1, preferred: !!~this.preferredCountries.map(function (t) {
               return t.toUpperCase();
             }).indexOf(e) };
+        }, replaceDialCodeOfNumber: function replaceDialCodeOfNumber(t) {
+          var e = Object.assign({}, this.activeCountry);if (e.dialCode && this.phone) {
+            var n = this.phone.indexOf("+" + e.dialCode);-1 != n && (this.phone = "+" + t.dialCode + this.phone.substring(n + e.dialCode.length + 1));
+          }
         }, choose: function choose(t) {
-          this.activeCountry = t, this.$emit("onInput", this.response);
+          this.replaceDialCode && !this.selectedCountryCode && t && this.replaceDialCodeOfNumber(t), this.activeCountry = t, !this.replaceDialCode && this.selectedCountryCode && t && (this.phone = "+" + t.dialCode), this.$emit("onInput", this.response);
         }, onInput: function onInput() {
           this.$refs.input.setCustomValidity(this.response.isValid ? "" : this.invalidMsg), this.$emit("input", this.response.number), this.$emit("onInput", this.response);
         }, onBlur: function onBlur() {
@@ -2235,10 +2235,10 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       }function x(t) {
         var e = t._readableState;for (U("flow", e.flowing); e.flowing && null !== t.read();) {}
       }function k(t, e) {
-        if (0 === e.length) return null;var n;return e.objectMode ? n = e.buffer.shift() : !t || t >= e.length ? (n = e.decoder ? e.buffer.join("") : 1 === e.buffer.length ? e.buffer.head.data : e.buffer.concat(e.length), e.buffer.clear()) : n = S(t, e.buffer, e.decoder), n;
-      }function S(t, e, n) {
-        var r;return t < e.head.data.length ? (r = e.head.data.slice(0, t), e.head.data = e.head.data.slice(t)) : r = t === e.head.data.length ? e.shift() : n ? C(t, e) : A(t, e), r;
-      }function C(t, e) {
+        if (0 === e.length) return null;var n;return e.objectMode ? n = e.buffer.shift() : !t || t >= e.length ? (n = e.decoder ? e.buffer.join("") : 1 === e.buffer.length ? e.buffer.head.data : e.buffer.concat(e.length), e.buffer.clear()) : n = C(t, e.buffer, e.decoder), n;
+      }function C(t, e, n) {
+        var r;return t < e.head.data.length ? (r = e.head.data.slice(0, t), e.head.data = e.head.data.slice(t)) : r = t === e.head.data.length ? e.shift() : n ? S(t, e) : A(t, e), r;
+      }function S(t, e) {
         var n = e.head,
             r = 1,
             i = n.data;for (t -= i.length; n = n.next;) {
@@ -2513,8 +2513,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         if (null === t || void 0 === t || null === e || void 0 === e) return !1;if (v.isPrimitive(t) || v.isPrimitive(e)) return t === e;if (n && Object.getPrototypeOf(t) !== Object.getPrototypeOf(e)) return !1;var i = $(t),
             a = $(e);if (i && !a || !i && a) return !1;if (i) return t = w.call(t), e = w.call(e), c(t, e, n);var o,
             d,
-            s = S(t),
-            u = S(e);if (s.length !== u.length) return !1;for (s.sort(), u.sort(), d = s.length - 1; d >= 0; d--) {
+            s = C(t),
+            u = C(e);if (s.length !== u.length) return !1;for (s.sort(), u.sort(), d = s.length - 1; d >= 0; d--) {
           if (s[d] !== u[d]) return !1;
         }for (d = s.length - 1; d >= 0; d--) {
           if (o = s[d], !c(t[o], e[o], n, r)) return !1;
@@ -2572,7 +2572,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         y(!1, t, e, n);
       }, x.ifError = function (t) {
         if (t) throw t;
-      };var S = Object.keys || function (t) {
+      };var C = Object.keys || function (t) {
         var e = [];for (var n in t) {
           b.call(t, n) && e.push(n);
         }return e;
@@ -2616,7 +2616,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         a = n(105),
         o = n(50),
         d = r,
-        s = o(i.a, a.a, !1, d, "data-v-b5193524", null);e.a = s.exports;
+        s = o(i.a, a.a, !1, d, "data-v-ca77b31e", null);e.a = s.exports;
   }, function (t, e) {}, function (t, e) {}, function (t, e) {
     t.exports = function (t, e, n, r, i, a) {
       var o,
@@ -3263,8 +3263,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               p = [],
               g = t.length,
               m = 0,
-              _ = C,
-              y = S;for (n = t.lastIndexOf(A), n < 0 && (n = 0), r = 0; r < n; ++r) {
+              _ = S,
+              y = C;for (n = t.lastIndexOf(A), n < 0 && (n = 0), r = 0; r < n; ++r) {
             t.charCodeAt(r) >= 128 && o("not-basic"), p.push(t.charCodeAt(r));
           }for (i = n > 0 ? n + 1 : 0; i < g;) {
             for (a = m, d = 1, s = b; i >= g && o("invalid-input"), u = f(t.charCodeAt(i++)), (u >= b || u > L((v - m) / d)) && o("overflow"), m += u * d, h = s <= y ? w : s >= y + E ? E : s - y, !(u < h); s += b) {
@@ -3287,7 +3287,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               m,
               _,
               y,
-              x = [];for (t = u(t), g = t.length, e = C, n = 0, a = S, d = 0; d < g; ++d) {
+              x = [];for (t = u(t), g = t.length, e = S, n = 0, a = C, d = 0; d < g; ++d) {
             (p = t[d]) < 128 && x.push(M(p));
           }for (r = i = x.length, i && x.push(A); r < g;) {
             for (s = v, d = 0; d < g; ++d) {
@@ -3315,8 +3315,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             E = 26,
             x = 38,
             k = 700,
-            S = 72,
-            C = 128,
+            C = 72,
+            S = 128,
             A = "-",
             R = /^xn--/,
             T = /[^\x20-\x7E]/,
@@ -3453,9 +3453,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           b = n(5).kMaxLength,
           w = "Cannot create final Buffer. It would be larger than 0x" + b.toString(16) + " bytes";_.Z_MIN_WINDOWBITS = 8, _.Z_MAX_WINDOWBITS = 15, _.Z_DEFAULT_WINDOWBITS = 15, _.Z_MIN_CHUNK = 64, _.Z_MAX_CHUNK = 1 / 0, _.Z_DEFAULT_CHUNK = 16384, _.Z_MIN_MEMLEVEL = 1, _.Z_MAX_MEMLEVEL = 9, _.Z_DEFAULT_MEMLEVEL = 8, _.Z_MIN_LEVEL = -1, _.Z_MAX_LEVEL = 9, _.Z_DEFAULT_LEVEL = _.Z_DEFAULT_COMPRESSION;for (var E = Object.keys(_), x = 0; x < E.length; x++) {
         var k = E[x];k.match(/^Z/) && Object.defineProperty(e, k, { enumerable: !0, value: _[k], writable: !1 });
-      }for (var S = { Z_OK: _.Z_OK, Z_STREAM_END: _.Z_STREAM_END, Z_NEED_DICT: _.Z_NEED_DICT, Z_ERRNO: _.Z_ERRNO, Z_STREAM_ERROR: _.Z_STREAM_ERROR, Z_DATA_ERROR: _.Z_DATA_ERROR, Z_MEM_ERROR: _.Z_MEM_ERROR, Z_BUF_ERROR: _.Z_BUF_ERROR, Z_VERSION_ERROR: _.Z_VERSION_ERROR }, C = Object.keys(S), A = 0; A < C.length; A++) {
-        var R = C[A];S[S[R]] = R;
-      }Object.defineProperty(e, "codes", { enumerable: !0, value: Object.freeze(S), writable: !1 }), e.Deflate = a, e.Inflate = o, e.Gzip = d, e.Gunzip = s, e.DeflateRaw = u, e.InflateRaw = l, e.Unzip = f, e.createDeflate = function (t) {
+      }for (var C = { Z_OK: _.Z_OK, Z_STREAM_END: _.Z_STREAM_END, Z_NEED_DICT: _.Z_NEED_DICT, Z_ERRNO: _.Z_ERRNO, Z_STREAM_ERROR: _.Z_STREAM_ERROR, Z_DATA_ERROR: _.Z_DATA_ERROR, Z_MEM_ERROR: _.Z_MEM_ERROR, Z_BUF_ERROR: _.Z_BUF_ERROR, Z_VERSION_ERROR: _.Z_VERSION_ERROR }, S = Object.keys(C), A = 0; A < S.length; A++) {
+        var R = S[A];C[C[R]] = R;
+      }Object.defineProperty(e, "codes", { enumerable: !0, value: Object.freeze(C), writable: !1 }), e.Deflate = a, e.Inflate = o, e.Gzip = d, e.Gunzip = s, e.DeflateRaw = u, e.InflateRaw = l, e.Unzip = f, e.createDeflate = function (t) {
         return new a(t);
       }, e.createInflate = function (t) {
         return new o(t);
@@ -3768,7 +3768,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       if (!t) return z;var d = 1;if (e === H && (e = 6), i < 0 ? (d = 0, i = -i) : i > 15 && (d = 2, i -= 16), a < 1 || a > Q || n !== J || i < 8 || i > 15 || e < 0 || e > 9 || o < 0 || o > K) return r(t, z);8 === i && (i = 9);var s = new v();return t.state = s, s.strm = t, s.wrap = d, s.gzhead = null, s.w_bits = i, s.w_size = 1 << s.w_bits, s.w_mask = s.w_size - 1, s.hash_bits = a + 7, s.hash_size = 1 << s.hash_bits, s.hash_mask = s.hash_size - 1, s.hash_shift = ~~((s.hash_bits + dt - 1) / dt), s.window = new T.Buf8(2 * s.w_size), s.head = new T.Buf16(s.hash_size), s.prev = new T.Buf16(s.w_size), s.lit_bufsize = 1 << a + 6, s.pending_buf_size = 4 * s.lit_bufsize, s.pending_buf = new T.Buf8(s.pending_buf_size), s.d_buf = 1 * s.lit_bufsize, s.l_buf = 3 * s.lit_bufsize, s.level = e, s.strategy = o, s.method = n, w(t);
     }function k(t, e) {
       return x(t, e, J, tt, et, V);
-    }function S(t, e) {
+    }function C(t, e) {
       var n, d, l, f;if (!t || !t.state || e > F || e < 0) return t ? r(t, z) : z;if (d = t.state, !t.output || !t.input && 0 !== t.avail_in || d.status === mt && e !== j) return r(t, 0 === t.avail_out ? G : z);if (d.strm = t, n = d.last_flush, d.last_flush = e, d.status === ft) if (2 === d.wrap) t.adler = 0, s(d, 31), s(d, 139), s(d, 8), d.gzhead ? (s(d, (d.gzhead.text ? 1 : 0) + (d.gzhead.hcrc ? 2 : 0) + (d.gzhead.extra ? 4 : 0) + (d.gzhead.name ? 8 : 0) + (d.gzhead.comment ? 16 : 0)), s(d, 255 & d.gzhead.time), s(d, d.gzhead.time >> 8 & 255), s(d, d.gzhead.time >> 16 & 255), s(d, d.gzhead.time >> 24 & 255), s(d, 9 === d.level ? 2 : d.strategy >= Y || d.level < 2 ? 4 : 0), s(d, 255 & d.gzhead.os), d.gzhead.extra && d.gzhead.extra.length && (s(d, 255 & d.gzhead.extra.length), s(d, d.gzhead.extra.length >> 8 & 255)), d.gzhead.hcrc && (t.adler = N(t.adler, d.pending_buf, d.pending, 0)), d.gzindex = 0, d.status = ht) : (s(d, 0), s(d, 0), s(d, 0), s(d, 0), s(d, 0), s(d, 9 === d.level ? 2 : d.strategy >= Y || d.level < 2 ? 4 : 0), s(d, wt), d.status = gt);else {
         var h = J + (d.w_bits - 8 << 4) << 8,
             c = -1;c = d.strategy >= Y || d.level < 2 ? 0 : d.level < 6 ? 1 : 6 === d.level ? 2 : 3, h |= c << 6, 0 !== d.strstart && (h |= lt), h += 31 - h % 31, d.status = gt, u(d, h), 0 !== d.strstart && (u(d, t.adler >>> 16), u(d, 65535 & t.adler)), t.adler = 1;
@@ -3793,7 +3793,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       } else if (0 === t.avail_in && i(e) <= i(n) && e !== j) return r(t, G);if (d.status === mt && 0 !== t.avail_in) return r(t, G);if (0 !== t.avail_in || 0 !== d.lookahead || e !== M && d.status !== mt) {
         var $ = d.strategy === Y ? m(d, e) : d.strategy === W ? g(d, e) : R[d.level].func(d, e);if ($ !== vt && $ !== bt || (d.status = mt), $ === _t || $ === vt) return 0 === t.avail_out && (d.last_flush = -1), D;if ($ === yt && (e === P ? O._tr_align(d) : e !== F && (O._tr_stored_block(d, 0, 0, !1), e === B && (a(d.head), 0 === d.lookahead && (d.strstart = 0, d.block_start = 0, d.insert = 0))), o(t), 0 === t.avail_out)) return d.last_flush = -1, D;
       }return e !== j ? D : d.wrap <= 0 ? U : (2 === d.wrap ? (s(d, 255 & t.adler), s(d, t.adler >> 8 & 255), s(d, t.adler >> 16 & 255), s(d, t.adler >> 24 & 255), s(d, 255 & t.total_in), s(d, t.total_in >> 8 & 255), s(d, t.total_in >> 16 & 255), s(d, t.total_in >> 24 & 255)) : (u(d, t.adler >>> 16), u(d, 65535 & t.adler)), o(t), d.wrap > 0 && (d.wrap = -d.wrap), 0 !== d.pending ? D : U);
-    }function C(t) {
+    }function S(t) {
       var e;return t && t.state ? (e = t.state.status) !== ft && e !== ht && e !== ct && e !== $t && e !== pt && e !== gt && e !== mt ? r(t, z) : (t.state = null, e === gt ? r(t, Z) : D) : z;
     }function A(t, e) {
       var n,
@@ -3856,7 +3856,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         yt = 2,
         vt = 3,
         bt = 4,
-        wt = 3;R = [new _(0, 0, 0, 0, c), new _(4, 4, 8, 4, $), new _(4, 5, 16, 8, $), new _(4, 6, 32, 32, $), new _(4, 4, 16, 16, p), new _(8, 16, 32, 32, p), new _(8, 16, 128, 128, p), new _(8, 32, 128, 256, p), new _(32, 128, 258, 1024, p), new _(32, 258, 258, 4096, p)], e.deflateInit = k, e.deflateInit2 = x, e.deflateReset = w, e.deflateResetKeep = b, e.deflateSetHeader = E, e.deflate = S, e.deflateEnd = C, e.deflateSetDictionary = A, e.deflateInfo = "pako deflate (from Nodeca project)";
+        wt = 3;R = [new _(0, 0, 0, 0, c), new _(4, 4, 8, 4, $), new _(4, 5, 16, 8, $), new _(4, 6, 32, 32, $), new _(4, 4, 16, 16, p), new _(8, 16, 32, 32, p), new _(8, 16, 128, 128, p), new _(8, 32, 128, 256, p), new _(32, 128, 258, 1024, p), new _(32, 258, 258, 4096, p)], e.deflateInit = k, e.deflateInit2 = x, e.deflateReset = w, e.deflateResetKeep = b, e.deflateSetHeader = E, e.deflate = C, e.deflateEnd = S, e.deflateSetDictionary = A, e.deflateInfo = "pako deflate (from Nodeca project)";
   }, function (t, e, n) {
     "use strict";
     function r(t) {
@@ -4024,14 +4024,14 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       var i;for (s(t, e - 257, 5), s(t, n - 1, 5), s(t, r - 4, 4), i = 0; i < r; i++) {
         s(t, t.bl_tree[2 * nt[i] + 1], 3);
       }E(t, t.dyn_ltree, e - 1), E(t, t.dyn_dtree, n - 1);
-    }function S(t) {
+    }function C(t) {
       var e,
           n = 4093624447;for (e = 0; e <= 31; e++, n >>>= 1) {
         if (1 & n && 0 !== t.dyn_ltree[2 * e]) return L;
       }if (0 !== t.dyn_ltree[18] || 0 !== t.dyn_ltree[20] || 0 !== t.dyn_ltree[26]) return M;for (e = 32; e < U; e++) {
         if (0 !== t.dyn_ltree[2 * e]) return M;
       }return L;
-    }function C(t) {
+    }function S(t) {
       ht || ($(), ht = !0), t.l_desc = new a(t.dyn_ltree, ut), t.d_desc = new a(t.dyn_dtree, lt), t.bl_desc = new a(t.bl_tree, ft), t.bi_buf = 0, t.bi_valid = 0, p(t);
     }function A(t, e, n, r) {
       s(t, (B << 1) + (r ? 1 : 0), 3), m(t, e, n, !0);
@@ -4040,7 +4040,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
     }function T(t, e, n, r) {
       var i,
           a,
-          o = 0;t.level > 0 ? (t.strm.data_type === P && (t.strm.data_type = S(t)), b(t, t.l_desc), b(t, t.d_desc), o = x(t), i = t.opt_len + 3 + 7 >>> 3, (a = t.static_len + 3 + 7 >>> 3) <= i && (i = a)) : i = a = n + 5, n + 4 <= i && -1 !== e ? A(t, e, n, r) : t.strategy === N || a === i ? (s(t, (j << 1) + (r ? 1 : 0), 3), v(t, rt, it)) : (s(t, (F << 1) + (r ? 1 : 0), 3), k(t, t.l_desc.max_code + 1, t.d_desc.max_code + 1, o + 1), v(t, t.dyn_ltree, t.dyn_dtree)), p(t), r && g(t);
+          o = 0;t.level > 0 ? (t.strm.data_type === P && (t.strm.data_type = C(t)), b(t, t.l_desc), b(t, t.d_desc), o = x(t), i = t.opt_len + 3 + 7 >>> 3, (a = t.static_len + 3 + 7 >>> 3) <= i && (i = a)) : i = a = n + 5, n + 4 <= i && -1 !== e ? A(t, e, n, r) : t.strategy === N || a === i ? (s(t, (j << 1) + (r ? 1 : 0), 3), v(t, rt, it)) : (s(t, (F << 1) + (r ? 1 : 0), 3), k(t, t.l_desc.max_code + 1, t.d_desc.max_code + 1, o + 1), v(t, t.dyn_ltree, t.dyn_dtree)), p(t), r && g(t);
     }function O(t, e, n) {
       return t.pending_buf[t.d_buf + 2 * t.last_lit] = e >>> 8 & 255, t.pending_buf[t.d_buf + 2 * t.last_lit + 1] = 255 & e, t.pending_buf[t.l_buf + t.last_lit] = 255 & n, t.last_lit++, 0 === e ? t.dyn_ltree[2 * n]++ : (t.matches++, e--, t.dyn_ltree[2 * (ot[n] + U + 1)]++, t.dyn_dtree[2 * o(e)]++), t.last_lit === t.lit_bufsize - 1;
     }var I = n(18),
@@ -4071,7 +4071,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         rt = new Array(2 * (z + 2));r(rt);var it = new Array(2 * Z);r(it);var at = new Array(512);r(at);var ot = new Array(256);r(ot);var dt = new Array(D);r(dt);var st = new Array(Z);r(st);var ut,
         lt,
         ft,
-        ht = !1;e._tr_init = C, e._tr_stored_block = A, e._tr_flush_block = T, e._tr_tally = O, e._tr_align = R;
+        ht = !1;e._tr_init = S, e._tr_stored_block = A, e._tr_flush_block = T, e._tr_tally = O, e._tr_align = R;
   }, function (t, e, n) {
     "use strict";
     t.exports = { 2: "need dictionary", 1: "stream end", 0: "", "-1": "file error", "-2": "stream error", "-3": "data error", "-4": "insufficient memory", "-5": "buffer error", "-6": "incompatible version" };
@@ -4133,8 +4133,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           Et,
           xt,
           kt,
-          St = 0,
-          Ct = new _.Buf8(4),
+          Ct = 0,
+          St = new _.Buf8(4),
           At = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];if (!t || !t.state || !t.output || !t.input && 0 !== t.avail_in) return I;n = t.state, n.mode === W && (n.mode = K), d = t.next_out, a = t.output, u = t.avail_out, o = t.next_in, i = t.input, s = t.avail_in, h = n.hold, c = n.bits, $ = s, p = u, Et = R;t: for (;;) {
         switch (n.mode) {case B:
             if (0 === n.wrap) {
@@ -4142,7 +4142,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             }for (; c < 16;) {
               if (0 === s) break t;s--, h += i[o++] << c, c += 8;
             }if (2 & n.wrap && 35615 === h) {
-              n.check = 0, Ct[0] = 255 & h, Ct[1] = h >>> 8 & 255, n.check = v(n.check, Ct, 2, 0), h = 0, c = 0, n.mode = j;break;
+              n.check = 0, St[0] = 255 & h, St[1] = h >>> 8 & 255, n.check = v(n.check, St, 2, 0), h = 0, c = 0, n.mode = j;break;
             }if (n.flags = 0, n.head && (n.head.done = !1), !(1 & n.wrap) || (((255 & h) << 8) + (h >> 8)) % 31) {
               t.msg = "incorrect header check", n.mode = ht;break;
             }if ((15 & h) !== P) {
@@ -4156,17 +4156,17 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               t.msg = "unknown compression method", n.mode = ht;break;
             }if (57344 & n.flags) {
               t.msg = "unknown header flags set", n.mode = ht;break;
-            }n.head && (n.head.text = h >> 8 & 1), 512 & n.flags && (Ct[0] = 255 & h, Ct[1] = h >>> 8 & 255, n.check = v(n.check, Ct, 2, 0)), h = 0, c = 0, n.mode = F;case F:
+            }n.head && (n.head.text = h >> 8 & 1), 512 & n.flags && (St[0] = 255 & h, St[1] = h >>> 8 & 255, n.check = v(n.check, St, 2, 0)), h = 0, c = 0, n.mode = F;case F:
             for (; c < 32;) {
               if (0 === s) break t;s--, h += i[o++] << c, c += 8;
-            }n.head && (n.head.time = h), 512 & n.flags && (Ct[0] = 255 & h, Ct[1] = h >>> 8 & 255, Ct[2] = h >>> 16 & 255, Ct[3] = h >>> 24 & 255, n.check = v(n.check, Ct, 4, 0)), h = 0, c = 0, n.mode = D;case D:
+            }n.head && (n.head.time = h), 512 & n.flags && (St[0] = 255 & h, St[1] = h >>> 8 & 255, St[2] = h >>> 16 & 255, St[3] = h >>> 24 & 255, n.check = v(n.check, St, 4, 0)), h = 0, c = 0, n.mode = D;case D:
             for (; c < 16;) {
               if (0 === s) break t;s--, h += i[o++] << c, c += 8;
-            }n.head && (n.head.xflags = 255 & h, n.head.os = h >> 8), 512 & n.flags && (Ct[0] = 255 & h, Ct[1] = h >>> 8 & 255, n.check = v(n.check, Ct, 2, 0)), h = 0, c = 0, n.mode = U;case U:
+            }n.head && (n.head.xflags = 255 & h, n.head.os = h >> 8), 512 & n.flags && (St[0] = 255 & h, St[1] = h >>> 8 & 255, n.check = v(n.check, St, 2, 0)), h = 0, c = 0, n.mode = U;case U:
             if (1024 & n.flags) {
               for (; c < 16;) {
                 if (0 === s) break t;s--, h += i[o++] << c, c += 8;
-              }n.length = h, n.head && (n.head.extra_len = h), 512 & n.flags && (Ct[0] = 255 & h, Ct[1] = h >>> 8 & 255, n.check = v(n.check, Ct, 2, 0)), h = 0, c = 0;
+              }n.length = h, n.head && (n.head.extra_len = h), 512 & n.flags && (St[0] = 255 & h, St[1] = h >>> 8 & 255, n.check = v(n.check, St, 2, 0)), h = 0, c = 0;
             } else n.head && (n.head.extra = null);n.mode = z;case z:
             if (1024 & n.flags && (g = n.length, g > s && (g = s), g && (n.head && (wt = n.head.extra_len - n.length, n.head.extra || (n.head.extra = new Array(n.head.extra_len)), _.arraySet(n.head.extra, i, o, g, wt)), 512 & n.flags && (n.check = v(n.check, i, g, o)), s -= g, o += g, n.length -= g), n.length)) break t;n.length = 0, n.mode = Z;case Z:
             if (2048 & n.flags) {
@@ -4190,7 +4190,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               if (0 === s) break t;s--, h += i[o++] << c, c += 8;
             }t.adler = n.check = r(h), h = 0, c = 0, n.mode = Y;case Y:
             if (0 === n.havedict) return t.next_out = d, t.avail_out = u, t.next_in = o, t.avail_in = s, n.hold = h, n.bits = c, O;t.adler = n.check = 1, n.mode = W;case W:
-            if (e === C || e === A) break t;case K:
+            if (e === S || e === A) break t;case K:
             if (n.last) {
               h >>>= 7 & c, c -= 7 & c, n.mode = ut;break;
             }for (; c < 3;) {
@@ -4226,7 +4226,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
               t.msg = "invalid code lengths set", n.mode = ht;break;
             }n.have = 0, n.mode = et;case et:
             for (; n.have < n.nlen + n.ndist;) {
-              for (; St = n.lencode[h & (1 << n.lenbits) - 1], gt = St >>> 24, mt = St >>> 16 & 255, _t = 65535 & St, !(gt <= c);) {
+              for (; Ct = n.lencode[h & (1 << n.lenbits) - 1], gt = Ct >>> 24, mt = Ct >>> 16 & 255, _t = 65535 & Ct, !(gt <= c);) {
                 if (0 === s) break t;s--, h += i[o++] << c, c += 8;
               }if (_t < 16) h >>>= gt, c -= gt, n.lens[n.have++] = _t;else {
                 if (16 === _t) {
@@ -4259,10 +4259,10 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             n.mode = rt;case rt:
             if (s >= 6 && u >= 258) {
               t.next_out = d, t.avail_out = u, t.next_in = o, t.avail_in = s, n.hold = h, n.bits = c, b(t, p), d = t.next_out, a = t.output, u = t.avail_out, o = t.next_in, i = t.input, s = t.avail_in, h = n.hold, c = n.bits, n.mode === W && (n.back = -1);break;
-            }for (n.back = 0; St = n.lencode[h & (1 << n.lenbits) - 1], gt = St >>> 24, mt = St >>> 16 & 255, _t = 65535 & St, !(gt <= c);) {
+            }for (n.back = 0; Ct = n.lencode[h & (1 << n.lenbits) - 1], gt = Ct >>> 24, mt = Ct >>> 16 & 255, _t = 65535 & Ct, !(gt <= c);) {
               if (0 === s) break t;s--, h += i[o++] << c, c += 8;
             }if (mt && 0 == (240 & mt)) {
-              for (yt = gt, vt = mt, bt = _t; St = n.lencode[bt + ((h & (1 << yt + vt) - 1) >> yt)], gt = St >>> 24, mt = St >>> 16 & 255, _t = 65535 & St, !(yt + gt <= c);) {
+              for (yt = gt, vt = mt, bt = _t; Ct = n.lencode[bt + ((h & (1 << yt + vt) - 1) >> yt)], gt = Ct >>> 24, mt = Ct >>> 16 & 255, _t = 65535 & Ct, !(yt + gt <= c);) {
                 if (0 === s) break t;s--, h += i[o++] << c, c += 8;
               }h >>>= yt, c -= yt, n.back += yt;
             }if (h >>>= gt, c -= gt, n.back += gt, n.length = _t, 0 === mt) {
@@ -4277,10 +4277,10 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
                 if (0 === s) break t;s--, h += i[o++] << c, c += 8;
               }n.length += h & (1 << n.extra) - 1, h >>>= n.extra, c -= n.extra, n.back += n.extra;
             }n.was = n.length, n.mode = at;case at:
-            for (; St = n.distcode[h & (1 << n.distbits) - 1], gt = St >>> 24, mt = St >>> 16 & 255, _t = 65535 & St, !(gt <= c);) {
+            for (; Ct = n.distcode[h & (1 << n.distbits) - 1], gt = Ct >>> 24, mt = Ct >>> 16 & 255, _t = 65535 & Ct, !(gt <= c);) {
               if (0 === s) break t;s--, h += i[o++] << c, c += 8;
             }if (0 == (240 & mt)) {
-              for (yt = gt, vt = mt, bt = _t; St = n.distcode[bt + ((h & (1 << yt + vt) - 1) >> yt)], gt = St >>> 24, mt = St >>> 16 & 255, _t = 65535 & St, !(yt + gt <= c);) {
+              for (yt = gt, vt = mt, bt = _t; Ct = n.distcode[bt + ((h & (1 << yt + vt) - 1) >> yt)], gt = Ct >>> 24, mt = Ct >>> 16 & 255, _t = 65535 & Ct, !(yt + gt <= c);) {
                 if (0 === s) break t;s--, h += i[o++] << c, c += 8;
               }h >>>= yt, c -= yt, n.back += yt;
             }if (h >>>= gt, c -= gt, n.back += gt, 64 & mt) {
@@ -4319,7 +4319,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             Et = N;break t;case ct:
             return L;case $t:default:
             return I;}
-      }return t.next_out = d, t.avail_out = u, t.next_in = o, t.avail_in = s, n.hold = h, n.bits = c, (n.wsize || p !== t.avail_out && n.mode < ht && (n.mode < ut || e !== S)) && f(t, t.output, t.next_out, p - t.avail_out) ? (n.mode = ct, L) : ($ -= t.avail_in, p -= t.avail_out, t.total_in += $, t.total_out += p, n.total += p, n.wrap && p && (t.adler = n.check = n.flags ? v(n.check, a, p, t.next_out - p) : y(n.check, a, p, t.next_out - p)), t.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === W ? 128 : 0) + (n.mode === nt || n.mode === X ? 256 : 0), (0 === $ && 0 === p || e === S) && Et === R && (Et = M), Et);
+      }return t.next_out = d, t.avail_out = u, t.next_in = o, t.avail_in = s, n.hold = h, n.bits = c, (n.wsize || p !== t.avail_out && n.mode < ht && (n.mode < ut || e !== C)) && f(t, t.output, t.next_out, p - t.avail_out) ? (n.mode = ct, L) : ($ -= t.avail_in, p -= t.avail_out, t.total_in += $, t.total_out += p, n.total += p, n.wrap && p && (t.adler = n.check = n.flags ? v(n.check, a, p, t.next_out - p) : y(n.check, a, p, t.next_out - p)), t.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === W ? 128 : 0) + (n.mode === nt || n.mode === X ? 256 : 0), (0 === $ && 0 === p || e === C) && Et === R && (Et = M), Et);
     }function c(t) {
       if (!t || !t.state) return I;var e = t.state;return e.window && (e.window = null), t.state = null, R;
     }function $(t, e) {
@@ -4338,8 +4338,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         E = 0,
         x = 1,
         k = 2,
-        S = 4,
-        C = 5,
+        C = 4,
+        S = 5,
         A = 6,
         R = 0,
         T = 1,
@@ -4388,9 +4388,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
   }, function (t, e, n) {
     "use strict";
     t.exports = function (t, e) {
-      var n, r, i, a, o, d, s, u, l, f, h, c, $, p, g, m, _, y, v, b, w, E, x, k, S;n = t.state, r = t.next_in, k = t.input, i = r + (t.avail_in - 5), a = t.next_out, S = t.output, o = a - (e - t.avail_out), d = a + (t.avail_out - 257), s = n.dmax, u = n.wsize, l = n.whave, f = n.wnext, h = n.window, c = n.hold, $ = n.bits, p = n.lencode, g = n.distcode, m = (1 << n.lenbits) - 1, _ = (1 << n.distbits) - 1;t: do {
+      var n, r, i, a, o, d, s, u, l, f, h, c, $, p, g, m, _, y, v, b, w, E, x, k, C;n = t.state, r = t.next_in, k = t.input, i = r + (t.avail_in - 5), a = t.next_out, C = t.output, o = a - (e - t.avail_out), d = a + (t.avail_out - 257), s = n.dmax, u = n.wsize, l = n.whave, f = n.wnext, h = n.window, c = n.hold, $ = n.bits, p = n.lencode, g = n.distcode, m = (1 << n.lenbits) - 1, _ = (1 << n.distbits) - 1;t: do {
         $ < 15 && (c += k[r++] << $, $ += 8, c += k[r++] << $, $ += 8), y = p[c & m];e: for (;;) {
-          if (v = y >>> 24, c >>>= v, $ -= v, 0 === (v = y >>> 16 & 255)) S[a++] = 65535 & y;else {
+          if (v = y >>> 24, c >>>= v, $ -= v, 0 === (v = y >>> 16 & 255)) C[a++] = 65535 & y;else {
             if (!(16 & v)) {
               if (0 == (64 & v)) {
                 y = p[(65535 & y) + (c & (1 << v) - 1)];continue e;
@@ -4410,30 +4410,30 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
                 }if (E = 0, x = h, 0 === f) {
                   if (E += u - v, v < b) {
                     b -= v;do {
-                      S[a++] = h[E++];
-                    } while (--v);E = a - w, x = S;
+                      C[a++] = h[E++];
+                    } while (--v);E = a - w, x = C;
                   }
                 } else if (f < v) {
                   if (E += u + f - v, (v -= f) < b) {
                     b -= v;do {
-                      S[a++] = h[E++];
+                      C[a++] = h[E++];
                     } while (--v);if (E = 0, f < b) {
                       v = f, b -= v;do {
-                        S[a++] = h[E++];
-                      } while (--v);E = a - w, x = S;
+                        C[a++] = h[E++];
+                      } while (--v);E = a - w, x = C;
                     }
                   }
                 } else if (E += f - v, v < b) {
                   b -= v;do {
-                    S[a++] = h[E++];
-                  } while (--v);E = a - w, x = S;
+                    C[a++] = h[E++];
+                  } while (--v);E = a - w, x = C;
                 }for (; b > 2;) {
-                  S[a++] = x[E++], S[a++] = x[E++], S[a++] = x[E++], b -= 3;
-                }b && (S[a++] = x[E++], b > 1 && (S[a++] = x[E++]));
+                  C[a++] = x[E++], C[a++] = x[E++], C[a++] = x[E++], b -= 3;
+                }b && (C[a++] = x[E++], b > 1 && (C[a++] = x[E++]));
               } else {
                 E = a - w;do {
-                  S[a++] = S[E++], S[a++] = S[E++], S[a++] = S[E++], b -= 3;
-                } while (b > 2);b && (S[a++] = S[E++], b > 1 && (S[a++] = S[E++]));
+                  C[a++] = C[E++], C[a++] = C[E++], C[a++] = C[E++], b -= 3;
+                } while (b > 2);b && (C[a++] = C[E++], b > 1 && (C[a++] = C[E++]));
               }break;
             }
           }break;
@@ -4460,8 +4460,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           E = 0,
           x = 0,
           k = 0,
-          S = 0,
           C = 0,
+          S = 0,
           A = 0,
           R = 0,
           T = 0,
@@ -4476,25 +4476,25 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         M[E] = 0;
       }for (x = 0; x < s; x++) {
         M[e[n + x]]++;
-      }for (C = w, S = 15; S >= 1 && 0 === M[S]; S--) {}if (C > S && (C = S), 0 === S) return u[l++] = 20971520, u[l++] = 20971520, h.bits = 1, 0;for (k = 1; k < S && 0 === M[k]; k++) {}for (C < k && (C = k), T = 1, E = 1; E <= 15; E++) {
+      }for (S = w, C = 15; C >= 1 && 0 === M[C]; C--) {}if (S > C && (S = C), 0 === C) return u[l++] = 20971520, u[l++] = 20971520, h.bits = 1, 0;for (k = 1; k < C && 0 === M[k]; k++) {}for (S < k && (S = k), T = 1, E = 1; E <= 15; E++) {
         if (T <<= 1, (T -= M[E]) < 0) return -1;
-      }if (T > 0 && (0 === t || 1 !== S)) return -1;for (P[1] = 0, E = 1; E < 15; E++) {
+      }if (T > 0 && (0 === t || 1 !== C)) return -1;for (P[1] = 0, E = 1; E < 15; E++) {
         P[E + 1] = P[E] + M[E];
       }for (x = 0; x < s; x++) {
         0 !== e[n + x] && (f[P[e[n + x]]++] = x);
-      }if (0 === t ? (N = B = f, _ = 19) : 1 === t ? (N = i, L -= 257, B = a, j -= 257, _ = 256) : (N = o, B = d, _ = -1), I = 0, x = 0, E = k, m = l, A = C, R = 0, p = -1, O = 1 << C, g = O - 1, 1 === t && O > 852 || 2 === t && O > 592) return 1;for (;;) {
+      }if (0 === t ? (N = B = f, _ = 19) : 1 === t ? (N = i, L -= 257, B = a, j -= 257, _ = 256) : (N = o, B = d, _ = -1), I = 0, x = 0, E = k, m = l, A = S, R = 0, p = -1, O = 1 << S, g = O - 1, 1 === t && O > 852 || 2 === t && O > 592) return 1;for (;;) {
         y = E - R, f[x] < _ ? (v = 0, b = f[x]) : f[x] > _ ? (v = B[j + f[x]], b = N[L + f[x]]) : (v = 96, b = 0), c = 1 << E - R, $ = 1 << A, k = $;do {
           $ -= c, u[m + (I >> R) + $] = y << 24 | v << 16 | b | 0;
         } while (0 !== $);for (c = 1 << E - 1; I & c;) {
           c >>= 1;
         }if (0 !== c ? (I &= c - 1, I += c) : I = 0, x++, 0 == --M[E]) {
-          if (E === S) break;E = e[n + f[x]];
-        }if (E > C && (I & g) !== p) {
-          for (0 === R && (R = C), m += k, A = E - R, T = 1 << A; A + R < S && !((T -= M[A + R]) <= 0);) {
+          if (E === C) break;E = e[n + f[x]];
+        }if (E > S && (I & g) !== p) {
+          for (0 === R && (R = S), m += k, A = E - R, T = 1 << A; A + R < C && !((T -= M[A + R]) <= 0);) {
             A++, T <<= 1;
-          }if (O += 1 << A, 1 === t && O > 852 || 2 === t && O > 592) return 1;p = I & g, u[p] = C << 24 | A << 16 | m - l | 0;
+          }if (O += 1 << A, 1 === t && O > 852 || 2 === t && O > 592) return 1;p = I & g, u[p] = S << 24 | A << 16 | m - l | 0;
         }
-      }return 0 !== I && (u[m + I] = E - R << 24 | 64 << 16 | 0), h.bits = C, 0;
+      }return 0 !== I && (u[m + I] = E - R << 24 | 64 << 16 | 0), h.bits = S, 0;
     };
   }, function (t, e, n) {
     "use strict";
@@ -4620,7 +4620,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           e = t.$createElement,
           n = t._self._c || e;return n("div", { staticClass: "vue-tel-input", class: { disabled: t.disabled } }, [n("div", { directives: [{ name: "click-outside", rawName: "v-click-outside", value: t.clickedOutside, expression: "clickedOutside" }], staticClass: "dropdown", class: { open: t.open }, attrs: { tabindex: "0" }, on: { click: t.toggleDropdown, keydown: [t.keyboardNav, function (e) {
             if (!("button" in e) && t._k(e.keyCode, "esc", 27, e.key)) return null;t.reset(e);
-          }] } }, [n("span", { staticClass: "selection" }, [t.enabledFlags ? n("div", { staticClass: "iti-flag", class: t.activeCountry.iso2.toLowerCase() }) : t._e(), t._v(" "), n("span", { staticClass: "dropdown-arrow" }, [t._v(t._s(t.open ? "▲" : "▼"))])]), t._v(" "), n("ul", { directives: [{ name: "show", rawName: "v-show", value: t.open, expression: "open" }], ref: "list" }, t._l(t.sortedCountries, function (e, r) {
+          }] } }, [n("span", { staticClass: "selection" }, [t.enabledFlags ? n("div", { staticClass: "iti-flag", class: t.activeCountry.iso2.toLowerCase() }) : t._e(), t._v(" "), t.enabledCountryCode ? n("span", { staticClass: "country-code" }, [t._v("+" + t._s(t.activeCountry.dialCode))]) : t._e(), t._v(" "), n("span", { staticClass: "dropdown-arrow" }, [t._v(t._s(t.open ? "▲" : "▼"))])]), t._v(" "), n("ul", { directives: [{ name: "show", rawName: "v-show", value: t.open, expression: "open" }], ref: "list" }, t._l(t.sortedCountries, function (e, r) {
         return n("li", { key: e.iso2 + (e.preferred ? "-preferred" : ""), staticClass: "dropdown-item", class: t.getItemClass(r, e.iso2), on: { click: function click(n) {
               t.choose(e);
             }, mousemove: function mousemove(e) {
@@ -4657,9 +4657,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_babelrc_false_presets_Users_stevend_coding_vue_vue_tel_input_node_modules_babel_preset_poi_index_js_jsx_vue_cacheDirectory_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(/*! !babel-loader?{"babelrc":false,"presets":[["/Users/stevend/coding/vue/vue-tel-input/node_modules/babel-preset-poi/index.js",{"jsx":"vue"}]],"cacheDirectory":true}!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue */ 2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_babelrc_false_presets_var_www_html_vue_tel_input_node_modules_babel_preset_poi_index_js_jsx_vue_cacheDirectory_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(/*! !babel-loader?{"babelrc":false,"presets":[["/var/www/html/vue-tel-input/node_modules/babel-preset-poi/index.js",{"jsx":"vue"}]],"cacheDirectory":true}!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue */ 2);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_11c469da_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-11c469da","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue */ 13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9b191c16_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-9b191c16","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue */ 13);
 var normalizeComponent = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 12)
 /* script */
 
@@ -4675,8 +4675,8 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_babelrc_false_presets_Users_stevend_coding_vue_vue_tel_input_node_modules_babel_preset_poi_index_js_jsx_vue_cacheDirectory_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_11c469da_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_babelrc_false_presets_var_www_html_vue_tel_input_node_modules_babel_preset_poi_index_js_jsx_vue_cacheDirectory_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9b191c16_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -4690,14 +4690,14 @@ var Component = normalizeComponent(
 /* 12 */,
 /* 13 */
 /*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-11c469da","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./demo/App.vue ***!
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-9b191c16","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./demo/App.vue ***!
   \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('h1',[_vm._v("Telephone Input Vue")]),_vm._v(" "),_c('h2',{staticStyle:{"color":"#999"}},[_vm._v("made with ❤ by Steven.")]),_vm._v(" "),_c('div',{staticStyle:{"width":"500px","margin":"20px auto"}},[_c('vue-tel-input',{attrs:{"preferredCountries":['us', 'gb', 'ua'],"dropdownOptions":{ disabledDialCode: true }},on:{"input":_vm.onInput}})],1),_vm._v(" "),(_vm.phone.number)?_c('div',{staticStyle:{"color":"#e83e8c"}},[_c('span',[_vm._v("\n      Number:\n      "),_c('strong',[_vm._v(_vm._s(_vm.phone.number))]),_vm._v(", \n    ")]),_vm._v(" "),_c('span',[_vm._v("\n      Is valid:\n      "),_c('strong',[_vm._v(_vm._s(_vm.phone.isValid))]),_vm._v(", \n    ")]),_vm._v(" "),_c('span',[_vm._v("\n      Country:\n      "),_c('strong',[_vm._v(_vm._s(_vm.phone.country))])])]):_vm._e()])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('h1',[_vm._v("Telephone Input Vue")]),_vm._v(" "),_c('h2',{staticStyle:{"color":"#999"}},[_vm._v("made with ❤ by Steven.")]),_vm._v(" "),_c('div',{staticStyle:{"width":"500px","margin":"20px auto"}},[_c('vue-tel-input',{attrs:{"preferredCountries":['us', 'gb', 'ua'],"replaceDialCode":true,"selectedCountryCode":false},on:{"onInput":_vm.onInput}})],1),_vm._v(" "),(_vm.phone.number)?_c('div',{staticStyle:{"color":"#e83e8c"}},[_c('span',[_vm._v("\n      Number:\n      "),_c('strong',[_vm._v(_vm._s(_vm.phone.number))]),_vm._v(", \n    ")]),_vm._v(" "),_c('span',[_vm._v("\n      Is valid:\n      "),_c('strong',[_vm._v(_vm._s(_vm.phone.isValid))]),_vm._v(", \n    ")]),_vm._v(" "),_c('span',[_vm._v("\n      Country:\n      "),_c('strong',[_vm._v(_vm._s(_vm.phone.country))])])]):_vm._e()])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

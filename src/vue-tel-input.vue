@@ -219,6 +219,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    replaceDialCode: {
+      type: Boolean,
+      default: false,
+    },
   },
   mounted() {
     this.initializeCountry();
@@ -379,9 +383,25 @@ export default {
         preferred,
       };
     },
+    replaceDialCodeOfNumber(country) {
+      let oldCountry = {...this.activeCountry};
+
+      if (oldCountry.dialCode && this.phone) {
+        let oldDialCodePosition = this.phone.indexOf('+' + oldCountry.dialCode);
+
+        if (oldDialCodePosition != -1) {
+          this.phone = `+${country.dialCode}${this.phone.substring(oldDialCodePosition +  oldCountry.dialCode.length + 1)}`;
+        }
+      }
+    },
     choose(country) {
+      if (this.replaceDialCode && !this.selectedCountryCode && country) {
+        this.replaceDialCodeOfNumber(country);
+      }
+
       this.activeCountry = country;
-      if (this.selectedCountryCode && country) {
+
+      if (!this.replaceDialCode && this.selectedCountryCode && country) {
         this.phone = '+' + country.dialCode;
       }
       this.$emit('onInput', this.response);
